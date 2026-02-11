@@ -14,7 +14,7 @@ export default function Home() {
       {!showLetter && (
         <div className={styles.envelopeContainer}>
           <Image
-            src="../public/Yo_Duck.gif"
+            src="/Yo_Duck.gif"
             alt="Cute cat"
             width={200}
             height={200}
