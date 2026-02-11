@@ -6,7 +6,7 @@ import styles from "./Letter.module.css";
 
 export function Letter() {
   const [showFinal, setShowFinal] = useState(false);
-  const [catImage, setCatImage] = useState("/Duck.gif");
+  const [catImage, setCatImage] = useState("./Duck.gif");
   const [noBtnPos, setNoBtnPos] = useState({ x: 0, y: 0 });
   const letterWindowRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -29,15 +29,15 @@ export function Letter() {
     setNoBtnPos({ x: moveX, y: moveY });
 
     // Swap cat gif to "no" reaction for 2ms
-    setCatImage("/Duck.gif");
+    setCatImage("./Duck.gif");
     setTimeout(() => {
-      setCatImage("/Angry_Duck.gif");
+      setCatImage("./Angry_Duck.gif");
     }, 2);
   };
 
   const handleYesClick = () => {
     setShowFinal(true);
-    setCatImage("/Dancing_Duck.gif");
+    setCatImage("./Dancing_Duck.gif");
   };
 
   return (
@@ -53,7 +53,7 @@ export function Letter() {
         </h1>
 
         <Image
-          src={catImage || "/placeholder.gif"}
+          src={catImage || "./placeholder.gif"}
           alt="Cat"
           width={250}
           height={250}
@@ -68,7 +68,7 @@ export function Letter() {
               className={styles.yesBtn}
               aria-label="Yes"
             >
-              <img src="/yes.svg" alt="yes button" width={100} />
+              <img src="./yes.svg" alt="yes button" width={100} />
             </button>
 
             <div className={styles.noWrapper}>
@@ -80,7 +80,7 @@ export function Letter() {
                 }}
                 aria-label="No"
               >
-                <img src="/no.svg" alt="no button" width={100} />
+                <img src="./no.svg" alt="no button" width={100} />
               </button>
             </div>
           </div>
