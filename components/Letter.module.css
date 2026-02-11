@@ -1,0 +1,108 @@
+.letterContainer {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.letterWindow {
+  width: 90vw;
+  max-width: 1000px;
+  aspect-ratio: 3/2;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/window.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+  gap: 1px;
+  padding-top: 180px;
+
+  transform: scale(1.2);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.letterWindow.open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.letterWindow.final .cat {
+  width: 180px;
+}
+
+.title {
+  font-size: 30px;
+  margin: 0;
+}
+
+.cat {
+  width: 250px;
+  margin: 10px 0;
+  transition: width 0.4s ease;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.noWrapper {
+  position: relative;
+}
+
+.yesBtn,
+.noBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.noBtn {
+  transition: transform 0.15s ease;
+}
+
+.noBtn:hover {
+  cursor: default;
+}
+
+.finalText {
+  font-size: 22px;
+  line-height: 1.4;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(255, 240, 240, 0.5);
+  border-radius: 12px;
+  margin: 0;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .letterWindow {
+    width: 95vw;
+    max-width: 600px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .buttons {
+    gap: 20px;
+  }
+}
