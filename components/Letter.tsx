@@ -54,7 +54,7 @@ export function Letter() {
 
         <Image
           src={catImage || "./placeholder.gif"}
-          alt="Cat"
+          alt="Duck"
           width={250}
           height={250}
           className={styles.cat}
