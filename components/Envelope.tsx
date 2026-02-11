@@ -11,7 +11,7 @@ export function Envelope({ onOpen }: EnvelopeProps) {
   return (
     <div className={styles.container} onClick={onOpen}>
       <Image
-        src="/envelope.svg"
+        src="./envelope.svg"
         alt="Envelope"
         width={250}
         height={200}

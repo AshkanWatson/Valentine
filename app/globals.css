@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/heart-bg.jpg");
+  background-image: url("https://raw.githubusercontent.com/AshkanWatson/Valentine/64a18a8483cb627e51a0e3102aaf4353b6ad9f1b/public/heart-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
   font-family: "Pixelify Sans", sans-serif;
